@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<!--Import Google Icon Font-->
+    <link href="Chatbot%20Widget-Dateien/icon.css" rel="stylesheet">
+    <link href="Chatbot%20Widget-Dateien/css.css" rel="stylesheet">
+
+    <!--Import Font Awesome Icon Font-->
+    <link rel="stylesheet" href="Chatbot%20Widget-Dateien/font-awesome.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="Chatbot%20Widget-Dateien/materialize.css">
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="Chatbot%20Widget-Dateien/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('Chatbot%20Widget-Dateien/flying_boat.png');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      Liberyse Concierge App
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">25 days left</p>
+  </div>
+</div>
+      
+        <!-- Bot pop-up intro -->
+        <div class="tap-target-wrapper open" style="right: -304px; bottom: -314.067px; position: fixed;"><div class="tap-target" data-target="profile_div">
+            <div class="tap-target-content" style="width: 792px; height: 400px; inset: 0px; padding: 192px; vertical-align: bottom;">
+                <h5 class="white-text">The Liberyse Concierge</h5>
+                <p class="white-text">I'm here for you - come talk to me</p>
+            </div>
+        </div><div class="tap-target-wave" style="top: 300px; left: 260px; width: 205px; height: 205px;"><div class="profile_div">
+            <img class="imgProfile" src="Chatbot%20Widget-Dateien/concierge.png">
+        </div></div></div>
+
+<div id="webchat"/>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+
+ 
+// Or you can replace latest with a specific version
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "Liberyse Concierge",
+    subtitle: "The best App ever!",
+
+  })
+</script>
+
+</body>
+</html>
